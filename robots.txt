@@ -1,0 +1,3 @@
+# 测试期：禁止搜索引擎收录。正式上线时改为 Allow 并加 Sitemap 行。
+User-agent: *
+Disallow: /

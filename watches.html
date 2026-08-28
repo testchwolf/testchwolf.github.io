@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C.H. WOLF · 腕表系列 / Watches & Archive</title>
+<meta name="description" content="The watch archive of C.H. WOLF — models, materials and the brand's own commentary. Not a shop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css?v=45">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="canonical" href="https://www.chwolf.de/watches.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="C.H. WOLF">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:title" content="腕表系列 · C.H. WOLF">
+  <meta property="og:description" content="浏览 C.H. WOLF 的腕表系列与保养服务，并进入品牌档案查阅历代型号。">
+  <meta property="og:url" content="https://www.chwolf.de/watches.html">
+  <meta property="og:image" content="https://www.chwolf.de/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="腕表系列 · C.H. WOLF">
+  <meta name="twitter:description" content="浏览 C.H. WOLF 的腕表系列与保养服务，并进入品牌档案查阅历代型号。">
+  <meta name="twitter:image" content="https://www.chwolf.de/assets/img/og-image.jpg">
+  <script src="assets/js/gate.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"C.H. WOLF","legalName":"CHW Glashütte in Sachsen GmbH","url":"https://www.chwolf.de/","logo":"https://www.chwolf.de/assets/img/logo.png","image":"https://www.chwolf.de/assets/img/og-image.jpg","foundingDate":"1868","description":"源自格拉苏蒂的制表名号，创立于 1868 年。以精密机械与有明确来历的材料，制作机械腕表。","address":{"@type":"PostalAddress","streetAddress":"Untere Hauptstraße 44","postalCode":"01768","addressLocality":"Glashütte","addressCountry":"DE"}}</script>
+<style>
+  /* 系列甄选：整块收窄并居中，图文更紧凑 */
+  .watch{padding-block:clamp(24px,3.4vw,50px);gap:clamp(12px,1.8vw,26px);max-width:780px;margin-inline:auto}
+  .watch__media img{max-width:86%;margin-inline:auto}
+  @media(max-width:720px){ .watch__media img{max-width:58%} }
+  /* 正文块：加宽到与下方系列区块（约 780）相近、居中 */
+  .narrow.prose{max-width:900px}
+  .narrow.prose p{max-width:none;margin-inline:auto}
+  /* Specials：图左上、首段并列于右；第二段（代表作品）跨整宽铺开，节省纵向空间 */
+  .watch--specials{align-items:start}
+  @media(min-width:901px){
+    .watch.watch--specials{row-gap:0}   /* 纵向改用 margin 控制，列间距不受影响 */
+    .watch.watch--specials .watch__media{order:0;grid-column:2;grid-row:1}
+    .watch.watch--specials .watch__body{grid-column:1;grid-row:1}
+    .watch.watch--specials .watch__wide{grid-column:1 / -1;grid-row:2;max-width:none;margin-top:1em;margin-bottom:0}
+    .watch.watch--specials .watch__tags{grid-column:1 / -1;grid-row:3}
+  }
+  .watch__tags{margin-top:1.5em}
+  .watch__body a,.watch__wide a{color:var(--accent-2);border-bottom:1px solid rgba(199,193,184,.28);transition:color .25s var(--ease)}
+  .watch__body a:hover,.watch__wide a:hover{color:var(--accent)}
+  /* 题头：教堂线描 + 价值观导语（紧凑，文左图右） */
+  .hero-duo{display:grid;grid-template-columns:1fr;gap:clamp(8px,1.5vw,16px);align-items:center;justify-content:center}
+  .hero-duo__media img{width:100%;height:auto;max-width:380px;margin-inline:auto;display:block}
+  .hero-duo__text .values-intro{font-size:clamp(1.02rem,1.7vw,1.38rem);max-width:300px}
+  @media(min-width:820px){
+    .hero-duo{grid-template-columns:auto auto;gap:clamp(6px,1vw,20px);justify-content:center}
+    .hero-duo__media{order:2}
+    .hero-duo__media img{max-width:clamp(300px,30vw,420px)}
+  }
+  /* 保养服务 · 编号清单 */
+  .svc-list{list-style:none;margin:1.2em 0 0;padding:0;counter-reset:svc}
+  .svc-list li{position:relative;padding:0 0 1.1em 2.4em;color:var(--ink-soft);font-size:1rem;line-height:1.7}
+  .svc-list li::before{counter-increment:svc;content:counter(svc,decimal-leading-zero);position:absolute;left:0;top:.05em;
+    font-family:var(--serif);font-size:1rem;color:var(--accent);letter-spacing:.02em}
+  .svc-list li:not(:last-child){border-bottom:1px solid var(--hair);margin-bottom:1.1em}
+  /* 关键词 chip：内层三语 span 不再单独成框 */
+  .spec > span > span{border:none;background:none;padding:0;margin:0;letter-spacing:inherit;text-transform:none;font-size:inherit;color:inherit}
+  /* 定期检修：左文右图，间距很小 */
+  .svc-revision{display:grid;grid-template-columns:1fr;gap:clamp(8px,1.2vw,14px);align-items:center}
+  .svc-revision__img{width:100%;height:auto;max-width:340px;margin:.4em auto 0;display:block;filter:drop-shadow(0 12px 22px rgba(0,0,0,.4))}
+  @media(min-width:820px){
+    .svc-revision{grid-template-columns:1.45fr 0.95fr;gap:clamp(10px,1.4vw,20px)}
+    .svc-revision__img{margin:0;max-width:320px}
+  }
+  /* 品牌档案入口：教堂线描做淡化底图 + 顶部留白更大 */
+  .arch-cta{position:relative;overflow:hidden;padding-top:clamp(60px,9vw,120px);padding-bottom:clamp(48px,6vw,84px)}
+  .arch-cta__text{position:relative;z-index:1;max-width:min(840px,94%);margin-inline:auto;text-align:center;
+    text-shadow:0 0 34px #1b1c20, 0 0 20px #1b1c20, 0 0 10px #1b1c20}
+  .arch-cta__text .btns{justify-content:center}
+  .arch-cta__bg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(840px,94%);height:auto;
+    opacity:.2;pointer-events:none;z-index:0}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-head">
+  <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="C.H. WOLF · Glashütte" style="height:40px;width:auto;display:block"></a>
+  <nav class="nav">
+    <a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span><span data-lang="de">Start</span></a>
+    <a href="heritage.html"><span data-lang="zh">品牌历史</span><span data-lang="en">History</span><span data-lang="de">Geschichte</span></a>
+    <a href="watches.html" class="active"><span data-lang="zh">腕表系列</span><span data-lang="en">Watches</span><span data-lang="de">Uhren</span></a>
+    <a href="press.html"><span data-lang="zh">媒体报道</span><span data-lang="en">Press</span><span data-lang="de">Presse</span></a>
+    <a href="collectors.html"><span data-lang="zh">收藏生态</span><span data-lang="en">Collectors</span><span data-lang="de">Sammlerwelt</span></a>
+    <a href="contact.html"><span data-lang="zh">联系我们</span><span data-lang="en">Contact</span><span data-lang="de">Kontakt</span></a>
+    <div class="lang-switch">
+      <button data-set-lang="zh">中</button><span class="sep">·</span>
+      <button data-set-lang="en">EN</button><span class="sep">·</span>
+      <button data-set-lang="de">DE</button>
+    </div>
+  </nav>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<!-- ===== 品牌档案入口（开屏首块） ===== -->
+<section class="arch-cta">
+  <div class="narrow reveal arch-cta__text">
+    <span class="kicker"><span data-lang="zh">品牌档案</span><span data-lang="en">Brand Archive</span><span data-lang="de">Markenarchiv</span></span>
+    <h2 class="h-sub" style="margin:.5em 0 0;font-size:clamp(2rem,4.2vw,3.1rem)"><span data-lang="zh">留存至今的制表篇章</span><span data-lang="en">Watchmaking Through Time</span><span data-lang="de">Uhrmacherkunst im Wandel der Zeit</span></h2>
+    <span class="rule" style="display:inline-block;margin:.7em auto 1.1em"></span>
+    <p class="muted" style="text-align:center;max-width:none;margin-inline:auto;font-size:clamp(1rem,1.35vw,1.12rem);line-height:1.9;color:var(--ink-soft)">
+      <span data-lang="zh">这里以档案的形式呈现 C.H. WOLF 留存至今的腕表。<br>由机芯构造、材料来源与设计缘起出发，<br>追溯每一件作品的诞生与流转，勾勒其独有的时间脉络。</span>
+      <span data-lang="en">The archive brings together C.H. WOLF timepieces that have survived to the present day.<br>Movement construction, material provenance and design origins trace the creation and journey of each piece, revealing its unique passage through time.</span>
+      <span data-lang="de">Das Archiv versammelt die bis heute erhaltenen Zeitmesser von C.H. WOLF.<br>Uhrwerk, Materialherkunft und Entwurfsgeschichte zeichnen die Entstehung und den Weg jedes einzelnen Stücks nach und machen seine eigene Geschichte im Lauf der Zeit sichtbar.</span>
+    </p>
+    <div class="btns" style="justify-content:center;margin-top:1.5em">
+      <a href="archive.html" class="btn btn--gold"><span data-lang="zh">浏览全部型号</span><span data-lang="en">Explore All Models</span><span data-lang="de">Alle Modelle entdecken</span></a>
+    </div>
+  </div>
+  <img class="arch-cta__bg" src="assets/img/heritage-tower-gears.png" alt="" aria-hidden="true">
+</section>
+
+
+<!-- ===== 品牌正文 ===== -->
+<section class="pad-sm" style="padding-top:clamp(28px,4vw,48px);padding-bottom:clamp(4px,1vw,12px)">
+  <div class="narrow prose reveal">
+    <div data-lang="zh">
+      <p>C.H. WOLF 始终追求尽善尽美，致力于制造品质卓越、性能可靠的时计。其独有的个性使每一枚腕表成为备受珍视的珍品，也成为可以代代相传的独特传承。为实现这一目标，C.H. WOLF 在恪守高级制表传统的同时，积极采用创新材料与先进技术。所有生产环节均遵循严格的质量标准，并接受严谨细致的检验。我们始终以这项传统为己任。它推动着我们，也启发着我们。这份灵感同样来自那些历经验证的材料。</p>
+      <p>借助创新工艺，我们将特殊材料运用于腕表的不同部位，包括表盘与表带。前沿制造工艺与当代设计由此融为一体，成就富有鲜明个性的腕表，并符合格拉苏蒂卓越的品质标准。</p>
+      <p>我们对产品有着很高的要求。除选用不同寻常的原材料外，我们尤其重视特殊材料的精细加工。因此，我们选择与高水平的专业人士及供应商合作，合作伙伴主要来自本地区及中欧。C.H. WOLF 腕表由此将卓越功能、先进技术、经典魅力与隽永优雅巧妙结合。</p>
+      <p>我们希望，这一切也能像吸引我们一样令您着迷。今后，我们也将继续讲述更多围绕 C.H. WOLF 腕表展开的精彩故事。</p>
+    </div>
+    <div data-lang="en">
+      <p>C.H. WOLF has always strived for perfection, creating timepieces of exceptional quality and reliability. Their exclusive character makes them sought-after treasures and a unique legacy intended to be passed from one generation to the next. To achieve this, C.H. WOLF embraces innovative materials and advanced technologies while remaining committed to the traditions of fine watchmaking. Every stage of our work is governed by exacting quality standards and rigorous controls of an exceptional level. We remain dedicated to this tradition. It is our motivation. It is our inspiration—an inspiration we also draw from time-tested materials.</p>
+      <p>Using innovative techniques, we incorporate distinctive materials into our watches, from their dials to their straps. We unite forward-looking manufacturing processes with contemporary design. The result is a collection of watches with a distinctive presence, made to meet the outstanding quality standards of Glashütte.</p>
+      <p>Our standards are exacting. Alongside the use of exceptional raw materials, we attach the greatest importance to their meticulous preparation and workmanship. We therefore collaborate with highly qualified specialists and suppliers, primarily from the region and Central Europe. In this way, C.H. WOLF watches skilfully combine outstanding functionality and advanced technology with classical charm and timeless elegance.</p>
+      <p>We hope that all of this fascinates you as much as it does us. We will therefore continue to tell the many compelling stories surrounding our watches.</p>
+    </div>
+    <div data-lang="de">
+      <p>C.H. WOLF strebt seit jeher nach Perfektion und fertigt Zeitmesser von höchster Qualität und Zuverlässigkeit, die durch ihren exklusiven Charakter zu gesuchten Kostbarkeiten werden, zu einem einzigartigen Vermächtnis, das von einer Generation an die nächste überreicht werden soll. Zu diesem Zweck setzt C.H. WOLF auf innovative Materialien und neuartige Spitzentechnologien, ohne die Traditionen der hohen Uhrmacherkunst zu vernachlässigen. Alle Tätigkeiten stehen unter der Ägide strenger Qualitätskriterien und rigoroser Kontrollen, die ihresgleichen suchen. Dieser Tradition fühlen wir uns verpflichtet. Das ist unser Ansporn. Das ist unsere Inspiration. Eine Inspiration, die wir auch aus bewährten Materialien schöpfen.</p>
+      <p>Mittels innovativer Techniken bringen wir besondere Materialien an unsere Uhren, auf Zifferblätter und in die Armbänder. Wir vereinen zukunftsweisende Herstellungsverfahren mit zeitgemäßem Design. So entstehen Uhren mit Charisma, die dem herausragenden Glashütter Qualitätsstandard gerecht werden.</p>
+      <p>Unsere Ansprüche sind hoch: Neben der Verwendung außergewöhnlicher Rohstoffe legen wir größten Wert auf die sorgfältige Verarbeitung der speziellen Materialien. Daher setzen wir auf die Zusammenarbeit mit hochqualifizierten Spezialisten und Zulieferern vornehmlich aus der Region und Mitteleuropa. Die Uhren aus dem Haus C. H. Wolf vereinen so auf gekonnte Art und Weise exzellente Funktionalität und neueste Technologien mit klassischem Charme und zeitloser Eleganz.</p>
+      <p>Wir hoffen, all das fasziniert Sie ebenso wie uns. Und so werden wir auch weiterhin viele interessante Geschichten rund um unsere Uhren erzählen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3.3 历史型号 ARCHIVE ===== -->
+<section class="pad-sm" style="padding-top:clamp(6px,1.4vw,16px)">
+  <div class="wrap">
+    <div class="center reveal" style="margin-bottom:1em">
+      <span class="kicker"><span data-lang="zh">系列甄选</span><span data-lang="en">Selected series</span><span data-lang="de">Ausgewählte Serien</span></span>
+    </div>
+
+    <!-- Urban -->
+    <article class="watch reveal">
+      <div class="watch__media"><img class="ratio-1" src="assets/img/products/series/urban.png" alt="Urban" loading="lazy" style="width:100%;object-fit:contain;display:block;filter:drop-shadow(0 16px 28px rgba(0,0,0,.5))"></div>
+      <div class="watch__body">
+        <span class="kicker">Urban</span>
+        <h3><span data-lang="zh">城市生活的从容秩序</span><span data-lang="en">Composure for City Life</span><span data-lang="de">Souveränität für das Stadtleben</span></h3>
+        <p class="muted">
+          <span data-lang="zh">Urban 把格拉苏蒂制表的清晰与秩序带入现代城市生活。克制的线条、直观的显示与恰到好处的细节，让腕表在商务、日常与正式场合之间从容切换。它传递的是一种面向当下的城市气质：可靠、自信、懂得分寸，也始终保有自己的风格。</span>
+          <span data-lang="en">Urban brings the clarity and order of Glashütte watchmaking into modern city life. Restrained lines, intuitive displays and well-judged details let each watch move with ease between business, everyday and formal settings. It conveys a present-day urban character: reliable, self-assured, measured — and always with a style of its own.</span>
+          <span data-lang="de">Urban bringt die Klarheit und Ordnung der Glashütter Uhrmacherei in das moderne Stadtleben. Reduzierte Linien, intuitiv ablesbare Anzeigen und wohldosierte Details lassen jede Uhr mühelos zwischen Beruf, Alltag und formellen Anlässen wechseln. So entsteht ein zeitgemäßer urbaner Charakter: verlässlich, selbstbewusst, mit Sinn für das rechte Maß – und stets mit einer eigenen Handschrift.</span>
+        </p>
+        <div class="spec"><span><span data-lang="zh">都市</span><span data-lang="en">Urban</span><span data-lang="de">Urban</span></span><span><span data-lang="zh">从容</span><span data-lang="en">Composed</span><span data-lang="de">Souverän</span></span><span><span data-lang="zh">克制</span><span data-lang="en">Restrained</span><span data-lang="de">Zurückhaltend</span></span><span><span data-lang="zh">优雅</span><span data-lang="en">Elegant</span><span data-lang="de">Elegant</span></span></div>
+      </div>
+    </article>
+
+    <!-- Pilot -->
+    <article class="watch reveal">
+      <div class="watch__media"><img class="ratio-1" src="assets/img/products/series/pilot.png" alt="Pilot" loading="lazy" style="width:100%;object-fit:contain;display:block;filter:drop-shadow(0 16px 28px rgba(0,0,0,.5))"></div>
+      <div class="watch__body">
+        <span class="kicker">Pilot</span>
+        <h3><span data-lang="zh">织物、空气与早期航空的质感</span><span data-lang="en">Fabric, Air and the Texture of Early Aviation</span><span data-lang="de">Stoff, Luft und die Haptik der frühen Luftfahrt</span></h3>
+        <p class="muted">
+          <span data-lang="zh">在飞行中，清晰关乎判断，可靠关乎抵达。Pilot 从这一理念出发，将驾驶舱的视觉秩序，与航空世界留在材料中的痕迹，一同转译为格拉苏蒂机械制表。织物的触感、仪表式显示与手动上链机械指向同一个原则：让飞行的经验，在腕间获得清晰而持久的形态。</span>
+          <span data-lang="en">In flight, clarity guides the decision and reliability sees you home. Pilot begins here, translating the visual order of the cockpit — and the traces aviation leaves in its materials — into Glashütte mechanical watchmaking. The touch of fabric, instrument-style displays and hand-wound mechanics all point to one principle: to give the experience of flight a clear and lasting form on the wrist.</span>
+          <span data-lang="de">Im Flug entscheidet Klarheit, und Zuverlässigkeit bringt ans Ziel. Pilot setzt hier an und übersetzt die visuelle Ordnung des Cockpits – und die Spuren, die die Luftfahrt in ihren Materialien hinterlässt – in Glashütter Mechanik. Die Haptik des Stoffs, instrumentelle Anzeigen und Handaufzug folgen einem Prinzip: der Erfahrung des Fliegens am Handgelenk eine klare und dauerhafte Form zu geben.</span>
+        </p>
+        <div class="spec"><span><span data-lang="zh">飞行员表</span><span data-lang="en">Pilot’s watch</span><span data-lang="de">Fliegeruhr</span></span><span><span data-lang="zh">硬朗</span><span data-lang="en">Rugged</span><span data-lang="de">Markant</span></span><span><span data-lang="zh">清晰易读</span><span data-lang="en">Legible</span><span data-lang="de">Ablesbar</span></span><span><span data-lang="zh">工具美学</span><span data-lang="en">Tool aesthetic</span><span data-lang="de">Werkzeug-Ästhetik</span></span></div>      </div>
+    </article>
+
+    <!-- Flymatic -->
+    <article class="watch reveal">
+      <div class="watch__media"><img class="ratio-1" src="assets/img/products/series/flymatic.png" alt="Flymatic Chrono" loading="lazy" style="width:100%;object-fit:contain;display:block;filter:drop-shadow(0 16px 28px rgba(0,0,0,.5))"></div>
+      <div class="watch__body">
+        <span class="kicker">Flymatic</span>
+        <h3><span data-lang="zh">为远行建立时间坐标</span><span data-lang="en">Time Coordinates for the Journey</span><span data-lang="de">Zeitkoordinaten für die weite Reise</span></h3>
+        <p class="muted">
+          <span data-lang="zh">世界越大，时间越需要秩序。Flymatic 为穿行于城市、时区与行程之间的人而作，将旅途中的多重时间收拢为清晰的机械秩序。旋转城市环把世界带到腕间，第二时区让彼处与此刻并存，计时装置记录旅程的节奏；再密集的信息，也始终一目了然——这正是 C.H. WOLF 面向世界的制表态度。</span>
+          <span data-lang="en">The wider the world, the more time needs order. Flymatic is made for those who move between cities, time zones and itineraries, drawing the many hours of a journey into one clear mechanical order. A rotating city ring brings the world to the wrist, a second time zone holds another place alongside the present, and the chronograph keeps the rhythm of the trip. However dense the information, it stays instantly legible — the outward-looking spirit of C.H. WOLF watchmaking.</span>
+          <span data-lang="de">Je größer die Welt, desto mehr braucht die Zeit Ordnung. Flymatic ist für Menschen gemacht, die zwischen Städten, Zeitzonen und Reiseplänen unterwegs sind, und fasst die vielen Zeiten einer Reise zu einer klaren mechanischen Ordnung zusammen. Ein drehbarer Städtering holt die Welt ans Handgelenk, eine zweite Zeitzone hält einen anderen Ort neben der Gegenwart präsent, und der Chronograph bewahrt den Rhythmus der Reise. So dicht die Informationen auch sind – sie bleiben unmittelbar ablesbar: die weltoffene Haltung der Uhrmacherkunst von C.H. WOLF.</span>
+        </p>
+        <div class="spec"><span><span data-lang="zh">世界时</span><span data-lang="en">World time</span><span data-lang="de">Weltzeit</span></span><span><span data-lang="zh">旅行</span><span data-lang="en">Travel</span><span data-lang="de">Reise</span></span><span><span data-lang="zh">计时</span><span data-lang="en">Chronograph</span><span data-lang="de">Chronograph</span></span><span><span data-lang="zh">秩序</span><span data-lang="en">Order</span><span data-lang="de">Ordnung</span></span></div>
+      </div>
+    </article>
+
+    <!-- Racematic -->
+    <article class="watch reveal">
+      <div class="watch__media"><img class="ratio-1" src="assets/img/products/series/racematic.png" alt="Racematic" loading="lazy" style="width:100%;object-fit:contain;display:block;filter:drop-shadow(0 16px 28px rgba(0,0,0,.5))"></div>
+      <div class="watch__body">
+        <span class="kicker">Racematic</span>
+        <h3><span data-lang="zh">当赛道激情化为机械精度</span><span data-lang="en">When Racing Passion Becomes Mechanical Precision</span><span data-lang="de">Wenn Rennsport-Leidenschaft zu mechanischer Präzision wird</span></h3>
+        <p class="muted">
+          <span data-lang="zh">在赛道上，速度唯有经过精准掌控，才成为性能。Racematic 从这一理念出发，将高性能跑车的力量、材料与座舱秩序，转译为格拉苏蒂机械制表。碳纤维、功能性色彩与飞返计时遵循同一原则：时间决定每一次判断、每一次加速，以及每一个瞬间的得与失。</span>
+          <span data-lang="en">On the track, speed becomes performance only through precise control. Racematic begins here, translating the power, materials and cockpit order of high-performance sports cars into Glashütte mechanical watchmaking. Carbon, purposeful colour and a flyback chronograph follow one principle: time decides every judgement, every acceleration and every fraction won or lost.</span>
+          <span data-lang="de">Auf der Strecke wird Geschwindigkeit erst durch präzise Kontrolle zur Leistung. Racematic setzt hier an und übersetzt die Kraft, die Materialien und die Cockpit-Ordnung leistungsstarker Sportwagen in Glashütter Mechanik. Carbon, funktionale Farbe und ein Flyback-Chronograph folgen einem Prinzip: Die Zeit entscheidet über jede Einschätzung, jede Beschleunigung und jeden gewonnenen oder verlorenen Augenblick.</span>
+        </p>
+        <div class="spec"><span><span data-lang="zh">赛车</span><span data-lang="en">Motorsport</span><span data-lang="de">Rennsport</span></span><span><span data-lang="zh">碳纤维</span><span data-lang="en">Carbon</span><span data-lang="de">Carbon</span></span><span><span data-lang="zh">飞返计时</span><span data-lang="en">Flyback</span><span data-lang="de">Flyback</span></span><span><span data-lang="zh">速度</span><span data-lang="en">Speed</span><span data-lang="de">Geschwindigkeit</span></span></div>
+      </div>
+    </article>
+
+    <!-- Specials -->
+    <article class="watch watch--specials reveal">
+      <div class="watch__media"><img class="ratio-1" src="assets/img/products/series/specials.png" alt="Specials" loading="lazy" style="width:100%;object-fit:contain;display:block;filter:drop-shadow(0 16px 28px rgba(0,0,0,.5))"></div>
+      <div class="watch__body">
+        <span class="kicker">Specials</span>
+        <h3><span data-lang="zh">为不可复制的故事而作</span><span data-lang="en">Made for Stories That Cannot Be Repeated</span><span data-lang="de">Für Geschichten, die sich nicht wiederholen lassen</span></h3>
+        <p class="muted">
+          <span data-lang="zh">Specials 汇集 C.H.WOLF 围绕特定合作、人物与历史对象创作的限量作品。每个项目都从一个明确的对象或事件出发，将相关的材料、色彩与身份转译为腕表设计，使限量拥有清晰的来源，也让独特经历以机械形式继续存在。</span>
+          <span data-lang="en">Specials brings together C.H. WOLF's limited works created around particular collaborations, people and historical objects. Each project begins with a specific object or event, translating its materials, colours and identity into the design of the watch—so that a limited edition carries a clear provenance, and a singular experience lives on in mechanical form.</span>
+          <span data-lang="de">Specials vereint die limitierten Arbeiten von C.H. WOLF, die rund um bestimmte Kooperationen, Persönlichkeiten und historische Objekte entstehen. Jedes Projekt geht von einem konkreten Objekt oder Ereignis aus und übersetzt dessen Materialien, Farben und Identität in die Gestaltung der Uhr – so erhält die Limitierung eine klare Herkunft, und eine einzigartige Erfahrung besteht in mechanischer Form fort.</span>
+        </p>
+      </div>
+      <p class="muted watch__wide">
+        <span data-lang="zh">代表作品包括可镌刻车辆编号的 <a href="https://www.watchlounge.com/c-h-wolf-racing-rs-1000-melkus-denkmal-fuer-den-ddr-ferrari/" target="_blank" rel="noopener">Racing RS 1000 MELKUS</a>、仅为车队制作 5 枚的 <a href="https://web.archive.org/web/*/https://www.c-h-wolf.de/kollektion/specials/edition-x-one/a-145/" target="_blank" rel="noopener">Edition X-One</a>、采用夺冠装备制作的 25 枚 <a href="https://manufaktuhr.info/?p=2267" target="_blank" rel="noopener">Special Eric Frenzel</a>，以及使用约 1900 年水手制服织物、限量 34 枚的 <a href="https://www.instagram.com/p/_jqX-MQzl7/" target="_blank" rel="noopener">Special Bootsmann</a>。</span>
+        <span data-lang="en">Notable pieces include the <a href="https://www.watchlounge.com/c-h-wolf-racing-rs-1000-melkus-denkmal-fuer-den-ddr-ferrari/" target="_blank" rel="noopener">Racing RS 1000 MELKUS</a>, engravable with the car's chassis number; the <a href="https://web.archive.org/web/*/https://www.c-h-wolf.de/kollektion/specials/edition-x-one/a-145/" target="_blank" rel="noopener">Edition X-One</a>, just five made for the team; the <a href="https://manufaktuhr.info/?p=2267" target="_blank" rel="noopener">Special Eric Frenzel</a>, 25 pieces using championship equipment; and the <a href="https://www.instagram.com/p/_jqX-MQzl7/" target="_blank" rel="noopener">Special Bootsmann</a>, 34 pieces made with fabric from sailors' uniforms of around 1900.</span>
+        <span data-lang="de">Zu den herausragenden Stücken zählen die <a href="https://www.watchlounge.com/c-h-wolf-racing-rs-1000-melkus-denkmal-fuer-den-ddr-ferrari/" target="_blank" rel="noopener">Racing RS 1000 MELKUS</a>, gravierbar mit der Fahrgestellnummer des Wagens; die <a href="https://web.archive.org/web/*/https://www.c-h-wolf.de/kollektion/specials/edition-x-one/a-145/" target="_blank" rel="noopener">Edition X-One</a>, nur fünf Exemplare für das Team; der <a href="https://manufaktuhr.info/?p=2267" target="_blank" rel="noopener">Special Eric Frenzel</a>, 25 Stück aus der Siegerausrüstung; sowie der <a href="https://www.instagram.com/p/_jqX-MQzl7/" target="_blank" rel="noopener">Special Bootsmann</a>, 34 Exemplare aus dem Stoff von Matrosenuniformen um 1900.</span>
+      </p>
+      <div class="spec watch__tags"><span><span data-lang="zh">限量</span><span data-lang="en">Limited</span><span data-lang="de">Limitiert</span></span><span><span data-lang="zh">联名</span><span data-lang="en">Collaboration</span><span data-lang="de">Kooperation</span></span><span><span data-lang="zh">故事</span><span data-lang="en">Narrative</span><span data-lang="de">Erzählung</span></span><span><span data-lang="zh">收藏</span><span data-lang="en">Collectible</span><span data-lang="de">Sammlerstück</span></span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== 保养与服务 ===== -->
+<section class="pad dark" id="service">
+  <div class="narrow prose reveal">
+    <h2 class="h-sec" style="margin:0 0 .8em;font-size:clamp(1.5rem,2.9vw,2rem)"><span data-lang="zh">保养服务</span><span data-lang="en">Service</span><span data-lang="de">Service</span></h2>
+
+    <div data-lang="zh"><p>您购得的是一枚制表水准很高的腕表。C.H. WOLF 的作品代表着所用材料的出众品质、制造中的极致用心，以及别具眼光的鲜明设计。为了让这枚腕表长久相伴，这里提供一些关于使用与保养的建议。机械腕表是一件高度精密的艺术品，其内部由大量（微小）零件完美协作；因此，正确的保养对于保值至关重要。</p></div>
+    <div data-lang="en"><p>You have acquired a watch of a high horological standard. Models from the house of C.H. WOLF stand for outstanding quality of the materials used, the greatest care in manufacture and a characteristic design with an eye for the special. So that your model gives you lasting pleasure, here are a few notes on operation and care. A mechanical watch is a highly complex work of art in whose interior a multitude of (miniature) parts work together perfectly; proper care is therefore essential to preserving its value.</p></div>
+    <div data-lang="de"><p>Sie haben eine Uhr von hohem uhrmacherischem Niveau erworben. Modelle aus dem Haus C.H. WOLF stehen für eine herausragende Qualität der verarbeiteten Materialien, größte Sorgfalt in der Fertigung und charakteristisches Design mit Blick fürs Besondere. Damit Ihnen Ihr Modell lange Freude bereitet, finden Sie an dieser Stelle einige Hinweise zu Bedienung und Pflege. Eine mechanische Uhr ist ein hochkompliziertes Kunstwerk, in dessen Inneren eine Vielzahl von (Kleinst-)Teilen perfekt zusammenarbeiten. Für den Werterhalt ist daher die richtige Pflege unerlässlich.</p></div>
+
+    <h3 style="font-family:var(--serif);font-size:1.4rem;margin:1.8em 0 .5em"><span data-lang="zh">定期检修</span><span data-lang="en">Regular revision</span><span data-lang="de">Regelmäßige Revision</span></h3>
+    <div class="svc-revision">
+      <div class="svc-revision__text">
+        <div data-lang="zh"><p>我们建议您每三到五年定期检查一次腕表——最好直接在我们位于格拉苏蒂的工坊进行。您的腕表将在此得到细致检修：机芯被拆解为各个部件，逐一仔细清洁与检查；磨损的零件会被更换（尤其是承受很高摩擦力的齿轮与轴榫）；所有密封件也会更换，以确保防水性能。随后重新组装、上油，并对表壳进行修整。</p><p>机芯将被重新调校；经过数日的最终检测阶段后，您的腕表便可再次投入佩戴。</p></div>
+        <div data-lang="en"><p>We recommend having your watch checked regularly every three to five years — ideally directly at our workshop in Glashütte. Here your model is carefully overhauled. The movement is disassembled into its components, which are carefully cleaned and inspected. Worn parts are replaced (this concerns in particular wheels and pinions subject to very high friction forces). In addition, all gaskets are replaced to ensure water resistance. The watch is then reassembled, oiled and the case reworked.</p><p>The movement is regulated again, and after a final testing phase of several days your watch is ready for use once more.</p></div>
+        <div data-lang="de"><p>Wir empfehlen Ihnen, Ihre Uhr regelmäßig alle drei bis fünf Jahre nachsehen zu lassen – am besten direkt in unserem Werk in Glashütte. Hier wird Ihr Modell sorgfältig revidiert. Das Uhrwerk wird in seine Bestandteile zerlegt und diese sorgsam gereinigt und kontrolliert. Verschlissene Teile werden ausgetauscht (dies betrifft insbesondere Räder und Zapfen, auf die sehr hohe Reibungskräfte einwirken). Außerdem werden sämtliche Dichtungen ersetzt, um die Wasserdichtigkeit zu gewährleisten. Danach wird die Uhr wieder zusammengebaut, geölt, das Gehäuse aufgearbeitet.</p><p>Das Werk wird erneut reguliert und nach einer abschließenden mehrtägigen Prüfungsphase ist Ihre Uhr wieder einsatzbereit.</p></div>
+      </div>
+      <img class="svc-revision__img" src="assets/img/workshop-window.png" alt="" loading="lazy">
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:1.4rem;margin:1.8em 0 .5em"><span data-lang="zh">制表师的建议</span><span data-lang="en">Recommendations from our master watchmakers</span><span data-lang="de">Empfehlungen unserer Uhrmachermeister</span></h3>
+    <ol class="svc-list">
+      <li><span data-lang="zh">请小心保护腕表，避免重击或碰撞，以免影响精密的机械结构。</span><span data-lang="en">Carefully protect your watch from heavy knocks or impacts so as not to impair the delicate mechanism.</span><span data-lang="de">Schützen Sie Ihre Uhr sorgfältig vor groben Schlägen oder Stößen, um die empfindliche Mechanik nicht zu beeinträchtigen.</span></li>
+      <li><span data-lang="zh">为避免损坏机芯，请勿自行打开腕表。</span><span data-lang="en">To avoid damage to the movement, you should not open the watch yourself.</span><span data-lang="de">Um Schäden am Uhrwerk zu vermeiden, sollten Sie die Uhr nicht selbst öffnen.</span></li>
+      <li><span data-lang="zh">表壳若有损伤，请仅交由专业人员及时修复。只有完好密闭、未受损的表壳，才能最佳地保护精细的机芯。</span><span data-lang="en">Have any case damage repaired exclusively and promptly by a specialist. Only a perfectly closed and undamaged case can optimally protect the fine movement.</span><span data-lang="de">Lassen Sie Gehäuseschäden ausschließlich und umgehend vom Fachmann beheben. Nur ein perfekt verschlossenes und unbeschädigtes Gehäuse kann das feine Uhrwerk optimal schützen.</span></li>
+      <li><span data-lang="zh">请勿将腕表置于极端温差或阳光直射之下。</span><span data-lang="en">Please never expose the watch to extreme temperature fluctuations or direct sunlight.</span><span data-lang="de">Setzen Sie die Uhr bitte niemals extremen Temperaturschwankungen oder direkter Sonneneinstrahlung aus.</span></li>
+      <li><span data-lang="zh">汗液残留（尤其运动后）应定期清除，这能显著延长表带与表壳密封件的使用寿命。</span><span data-lang="en">Residues of perspiration — including after sport — should be removed regularly. This gives the strap and case gaskets a considerably longer life.</span><span data-lang="de">Rückstände von Schweiß – auch nach dem Sport – sollten regelmäßig entfernt werden. So haben Armband und Gehäusedichtungen eine wesentlich längere Lebensdauer.</span></li>
+      <li><span data-lang="zh">条件允许时，将腕表存放于转表器（Uhrenbeweger）上也有益处，有助于轴承的润滑。</span><span data-lang="en">It is also beneficial to keep your watch on a watch winder where possible. This has a positive effect on the lubrication of the bearings.</span><span data-lang="de">Ebenfalls günstig wirkt es sich aus, wenn Sie Ihre Uhr nach Möglichkeit auf einem Uhrenbeweger aufbewahren. Dies hat einen positiven Effekt auf die Schmierung der Lager.</span></li>
+    </ol>
+
+  </div>
+</section>
+
+<!-- ===== 腕表咨询 ===== -->
+<section class="pad-sm">
+  <div class="narrow center reveal" style="max-width:620px">
+    <span class="kicker"><span data-lang="zh">腕表咨询</span><span data-lang="en">Watch Enquiries</span><span data-lang="de">Beratung</span></span>
+    <h2 class="h-sub" style="margin:.5em 0 0;font-size:clamp(1.5rem,2.9vw,2rem)"><span data-lang="zh">进一步了解一枚 C.H.WOLF 腕表</span><span data-lang="en">Learn More About a C.H.WOLF Timepiece</span><span data-lang="de">Mehr über einen Zeitmesser von C.H.WOLF erfahren</span></h2>
+    <span class="rule" style="display:inline-block;margin:.7em auto 0"></span>
+    <p class="muted" style="text-align:center;font-size:clamp(1.02rem,1.5vw,1.18rem);line-height:1.9;color:var(--ink-soft);margin-top:1.9em">
+      <span data-lang="zh">如欲进一步了解 C.H. WOLF 的腕表作品与品牌故事，<br>或洽询合作及其他相关事宜，欢迎与我们联系。</span>
+      <span data-lang="en">To learn more about C.H. WOLF timepieces and the story of the brand,<br>or to enquire about collaborations and other matters, please feel free to contact us.</span>
+      <span data-lang="de">Wenn Sie mehr über die Zeitmesser und die Geschichte von C.H. WOLF erfahren<br>oder sich zu Kooperationen und weiteren Anliegen mit uns austauschen möchten, freuen wir uns auf Ihre Kontaktaufnahme.</span>
+    </p>
+    <div class="btns" style="justify-content:center;margin-top:1.4em">
+      <a href="contact.html" class="btn"><span data-lang="zh">联系我们</span><span data-lang="en">Contact Us</span><span data-lang="de">Kontakt aufnehmen</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="C.H. WOLF · Glashütte" style="height:40px;width:auto;display:block"></a>
+        <p class="foot-note" style="margin-top:1.1em">CHW Glashütte in Sachsen GmbH<br>Untere Hauptstraße 44<br>01768 Glashütte, Deutschland</p>
+      </div>
+      <div class="foot-col">
+        <h5><span data-lang="zh">服务与信息</span><span data-lang="en">Service &amp; Information</span><span data-lang="de">Service &amp; Information</span></h5>
+        <a href="contact.html"><span data-lang="zh">联系我们</span><span data-lang="en">Contact</span><span data-lang="de">Kontakt</span></a>
+        <a href="datenschutz.html"><span data-lang="zh">隐私政策</span><span data-lang="en">Privacy</span><span data-lang="de">Datenschutz</span></a>
+        <a href="contact.html#impressum"><span data-lang="zh">法律声明</span><span data-lang="en">Impressum</span><span data-lang="de">Impressum</span></a>
+        <span class="foot-copy">© 2026 CHW Glashütte in Sachsen GmbH</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
