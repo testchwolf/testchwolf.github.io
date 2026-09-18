@@ -41,9 +41,10 @@
     rgba(27,28,32,.5) 0%, rgba(27,28,32,.1) 32%, rgba(27,28,32,.5) 68%, #1b1c20 100%)}
   /* 手机端：取消桌面拖动定位（避免标题顶到 logo），字号收敛，按钮落偏下、一屏放下 */
   @media (max-width:680px){
-    .hero .hero__inner{transform:none !important;padding-bottom:clamp(40px,7vh,60px)}
-    .hero .display{max-width:none !important;font-size:clamp(1.85rem,7.4vw,2.15rem);line-height:1.24}
-    .hero .lead{max-width:none !important;font-size:.98rem;line-height:1.62}
+    /* 主文字锁定在页面中下段：底部约 88%、顶部约 40–55%，绝不上顶到 logo */
+    .hero .hero__inner{transform:none !important;padding-bottom:clamp(48px,12vh,100px)}
+    .hero .display{max-width:none !important;font-size:clamp(1.8rem,7vw,2.1rem);line-height:1.24}
+    .hero .lead{max-width:none !important;font-size:.96rem;line-height:1.6}
     .hero .kicker{margin-bottom:.5em}
   }
 </style>
