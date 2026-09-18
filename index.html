@@ -46,6 +46,9 @@
     .hero .display{max-width:none !important;font-size:clamp(1.8rem,7vw,2.1rem);line-height:1.24}
     .hero .lead{max-width:none !important;font-size:.96rem;line-height:1.6}
     .hero .kicker{margin-bottom:.5em}
+    /* 英/德文字更长：标题与正文字号再收，同样稳定落在中下段、不上顶 */
+    html[lang="en"] .hero .display,html[lang="de"] .hero .display{font-size:clamp(1.5rem,6vw,1.8rem)}
+    html[lang="en"] .hero .lead,html[lang="de"] .hero .lead{font-size:.9rem;line-height:1.55}
   }
 </style>
 </head>
