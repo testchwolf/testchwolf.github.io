@@ -460,6 +460,8 @@ body.nav-open .nav-toggle span:nth-child(3){top:15px;transform:rotate(-45deg)}
     z-index:99;
   }
   body.nav-open .nav{transform:none}
+  /* 菜单打开时锁住页面滚动，避免底层内容从菜单后透出 */
+  body.nav-open{overflow:hidden;overscroll-behavior:none}
   .nav a{font-size:1.1rem;color:var(--ink)}
   .nav .lang-switch{margin-top:16px}
   .nav-toggle{display:block;z-index:101;position:relative}
