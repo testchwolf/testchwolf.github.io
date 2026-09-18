@@ -75,6 +75,15 @@
     var toggle = document.querySelector('.nav-toggle');
     if (!toggle) return;
     toggle.addEventListener('click', function () {
+      var opening = !document.body.classList.contains('nav-open');
+      // 打开菜单前先瞬间回到页首：菜单永远盖在页顶，杜绝底层内容透出
+      if (opening) {
+        var htmlEl = document.documentElement;
+        var prev = htmlEl.style.scrollBehavior;
+        htmlEl.style.scrollBehavior = 'auto';
+        window.scrollTo(0, 0);
+        htmlEl.style.scrollBehavior = prev;
+      }
       document.body.classList.toggle('nav-open');
     });
     document.querySelectorAll('.nav a').forEach(function (a) {
