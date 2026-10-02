@@ -76,30 +76,32 @@
           <b>CHW Glashütte in Sachsen GmbH</b><br>
           Untere Hauptstraße 44<br>
           01768 Glashütte, Deutschland<br><br>
-          <span class="muted"><span data-lang="zh">电话</span><span data-lang="en">Phone</span><span data-lang="de">Telefon</span>:</span> <span class="todo"><span data-lang="zh">待补</span><span data-lang="en">pending</span><span data-lang="de">folgt</span></span><br>
-          <span class="muted">E-Mail:</span> <span class="todo"><span data-lang="zh">待补</span><span data-lang="en">pending</span><span data-lang="de">folgt</span></span><br>
-          <span class="muted">Web:</span> <span class="todo"><span data-lang="zh">待补</span><span data-lang="en">pending</span><span data-lang="de">folgt</span></span>
+          <span class="muted">E-Mail:</span> info@zmac-gmbh.de<br>
+          <span class="muted">Web:</span> chwolf-glashuette.de · chwolf-glashuette.com
         </div>
       </div>
 
       <!-- enquiry form (non-sales) -->
       <div class="reveal">
         <span class="kicker"><span data-lang="zh">咨询表单</span><span data-lang="en">Enquiry</span><span data-lang="de">Anfrage</span></span>
-        <form class="enquiry" style="margin-top:1em" onsubmit="return false;">
+        <form class="enquiry" style="margin-top:1em" action="https://formsubmit.co/info@zmac-gmbh.de" method="POST">
+          <input type="hidden" name="_subject" value="C.H. WOLF — 网站咨询 / Website enquiry">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <label style="display:block;margin-bottom:1em">
             <span class="muted" style="font-size:.8rem"><span data-lang="zh">姓名</span><span data-lang="en">Name</span><span data-lang="de">Name</span></span>
-            <input type="text" style="width:100%;padding:.8em;border:1px solid var(--hair);background:rgba(255,255,255,.05);border-radius:2px;font-family:inherit;margin-top:.3em">
+            <input type="text" name="Name" required style="width:100%;padding:.8em;border:1px solid var(--hair);background:rgba(255,255,255,.05);border-radius:2px;font-family:inherit;margin-top:.3em">
           </label>
           <label style="display:block;margin-bottom:1em">
             <span class="muted" style="font-size:.8rem">E-Mail</span>
-            <input type="email" style="width:100%;padding:.8em;border:1px solid var(--hair);background:rgba(255,255,255,.05);border-radius:2px;font-family:inherit;margin-top:.3em">
+            <input type="email" name="E-Mail" required style="width:100%;padding:.8em;border:1px solid var(--hair);background:rgba(255,255,255,.05);border-radius:2px;font-family:inherit;margin-top:.3em">
           </label>
           <label style="display:block;margin-bottom:1em">
             <span class="muted" style="font-size:.8rem"><span data-lang="zh">留言</span><span data-lang="en">Message</span><span data-lang="de">Nachricht</span></span>
-            <textarea rows="4" style="width:100%;padding:.8em;border:1px solid var(--hair);background:rgba(255,255,255,.05);border-radius:2px;font-family:inherit;margin-top:.3em"></textarea>
+            <textarea name="Nachricht" rows="4" required style="width:100%;padding:.8em;border:1px solid var(--hair);background:rgba(255,255,255,.05);border-radius:2px;font-family:inherit;margin-top:.3em"></textarea>
           </label>
           <button class="btn" type="submit"><span data-lang="zh">发送</span><span data-lang="en">Send</span><span data-lang="de">Senden</span></button>
-          <p class="todo" style="margin-top:1em"><span data-lang="zh">待补：表单提交端点 / 邮箱路由</span><span data-lang="en">Pending: form endpoint / mail routing</span><span data-lang="de">Ausstehend: Formular-Endpunkt / Mail-Routing</span></p>
         </form>
       </div>
 
@@ -110,7 +112,7 @@
 <!-- ===== IMPRESSUM ===== -->
 <section class="pad-sm tinted" id="impressum" style="scroll-margin-top:90px">
   <div class="narrow reveal">
-    <span class="kicker">Impressum · <span data-lang="zh">法定信息</span><span data-lang="en">Legal notice</span><span data-lang="de">Gesetzliche Angaben</span></span>
+    <span class="kicker">Impressum</span>
     <p class="muted" style="font-size:.82rem;margin:.6em 0 1.4em">Angaben gemäß § 5 TMG</p>
     <div class="impressum">
       <b>CHW Glashütte in Sachsen GmbH</b><br>
@@ -118,8 +120,7 @@
       Registergericht: Amtsgericht Dresden · Registernummer: HRB 35623<br>
       Geschäftsführerin: Xiaoping Zhao-Moll<br>
       Unternehmensgegenstand: Herstellung, Reparatur und Vertrieb von Uhren<br>
-      Umsatzsteuer-Identifikationsnummer (USt-IdNr.): <span class="todo"><span data-lang="zh">待补 / 若无则删除此行</span><span data-lang="en">pending / remove if none</span><span data-lang="de">folgt / andernfalls entfernen</span></span><br>
-      Telefon: <span class="todo">—</span> · E-Mail: <span class="todo">—</span> · Web: <span class="todo">—</span><br><br>
+      E-Mail: info@zmac-gmbh.de · Web: chwolf-glashuette.de<br><br>
       Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Xiaoping Zhao-Moll (Anschrift wie oben)
     </div>
     <hr style="border:none;border-top:1px solid var(--hair);margin:2em 0">
