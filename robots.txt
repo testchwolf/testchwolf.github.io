@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chwolf-glashuette.de/sitemap.xml
+Sitemap: https://chwolf-glashuette.com/sitemap.xml
