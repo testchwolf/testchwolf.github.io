@@ -4,15 +4,26 @@
 (function () {
   var KEY = "chw_gate_ok";
   var HASH = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4";
+  var FB = "7c540741"; // 非安全上下文(http)下的后备哈希，避免 crypto.subtle 不可用导致无法登录
   if (sessionStorage.getItem(KEY) === "1") return;      // 本次会话已解锁
   document.documentElement.style.visibility = "hidden"; // 先藏住正文，防闪现
 
-  function sha(s) {
-    return crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)).then(function (b) {
-      return Array.prototype.map.call(new Uint8Array(b), function (x) {
-        return ("0" + x.toString(16)).slice(-2);
-      }).join("");
-    });
+  function fbHash(s) { // djb2(xor) 后备，仅在 crypto.subtle 不可用时使用
+    var h = 5381;
+    for (var i = 0; i < s.length; i++) { h = ((h * 33) ^ s.charCodeAt(i)) >>> 0; }
+    return h.toString(16);
+  }
+
+  function verify(s) { // 返回 Promise<boolean>
+    if (window.crypto && crypto.subtle && window.isSecureContext) {
+      return crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)).then(function (b) {
+        var h = Array.prototype.map.call(new Uint8Array(b), function (x) {
+          return ("0" + x.toString(16)).slice(-2);
+        }).join("");
+        return h === HASH;
+      }).catch(function () { return fbHash(s) === FB; });
+    }
+    return Promise.resolve(fbHash(s) === FB);
   }
 
   function build() {
@@ -34,8 +45,8 @@
         err = w.querySelector("#chw-err");
     inp.focus();
     function submit() {
-      sha(inp.value).then(function (h) {
-        if (h === HASH) {
+      verify(inp.value).then(function (ok) {
+        if (ok) {
           sessionStorage.setItem(KEY, "1");
           w.parentNode.removeChild(w);
           document.documentElement.style.visibility = "";
