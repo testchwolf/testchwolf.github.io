@@ -4,25 +4,25 @@
    ============================================================ */
 
 /* ---------- Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Spectral:ital,wght@0,300;1,300;1,400&family=Noto+Serif+SC:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Spectral:ital,wght@0,300;1,300;1,400&family=Noto+Serif+SC:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Bodoni+Moda:wght@400&display=swap');
 
 /* ---------- Tokens ---------- */
 :root{
   /* palette — brand colours · dark ground, light text */
-  --paper:      #26272b;   /* refined graphite grey — base ground */
-  --paper-2:    #2e3036;   /* raised panel — graphite lifted */
-  --ink:        #faf8f4;   /* Soft White — primary text / headings */
-  --ivory:      #f2eee6;   /* Warm Ivory — intro / lead */
-  --ink-soft:   #c7c1b8;   /* Stone Grey — body reading */
-  --muted:      #969ba0;   /* Steel Grey (lifted) — captions */
-  --hair:       rgba(199,193,184,.16);   /* Stone Grey divider */
-  --hair-soft:  rgba(199,193,184,.09);
-  --hair-gold:  rgba(200,138,58,.26);    /* 淡金框架线 · 时不时点缀 */
-  --silver:     #9aa0a5;   /* Steel Grey — kickers / labels */
-  --accent:     #c88a3a;   /* 暖金铜 · 取自品牌金指针，铜金之间 */
-  --accent-2:   #d6a24f;   /* 浅金 · 链接/悬停 */
-  --night:      #1b1c20;   /* deepest graphite — hero / footer / feature bands */
-  --night-2:    #26272b;
+  --paper:      #17191d;   /* 冷炭灰 · 基础底 */
+  --paper-2:    #1f2228;   /* 抬升面板 */
+  --ink:        #f2ede2;   /* 暖白 · 浅色文字/标题基 */
+  --ivory:      #efe8da;   /* 暖象牙 · 导语 */
+  --ink-soft:   #ddd5c4;   /* 暖白 · 正文阅读 */
+  --muted:      #9a938a;   /* 暖灰 · 说明 */
+  --hair:       rgba(241,236,225,.13);   /* 暖灰分隔线 */
+  --hair-soft:  rgba(241,236,225,.07);
+  --hair-gold:  rgba(173,165,136,.30);    /* 金框架线 */
+  --silver:     #a89f8f;   /* 暖灰 · 标签 */
+  --accent:     #ada588;   /* 古铜金 · 品牌策略金 */
+  --accent-2:   #c6c0a6;   /* 浅金 · 链接/悬停 */
+  --night:      #121418;   /* 最深冷炭 · hero/footer */
+  --night-2:    #17191d;
 
   /* type */
   --serif: "Cormorant Garamond", "Noto Serif SC", Georgia, "Songti SC", serif;
@@ -195,7 +195,7 @@ html[lang="zh"] .values-intro{font-family:var(--serif-cjk);font-style:normal;let
 .brand b{font-family:var(--serif);font-weight:500;font-size:1.32rem;letter-spacing:.12em}
 .brand span{font-family:var(--sans);font-size:.6rem;letter-spacing:.42em;color:var(--silver);margin-top:4px}
 .site-head.on-dark:not(.is-solid) .brand b{color:var(--ink)}
-.site-head.on-dark:not(.is-solid) .brand span{color:rgba(233,235,233,.65)}
+.site-head.on-dark:not(.is-solid) .brand span{color:rgba(238,235,226,.65)}
 
 .nav{display:flex;align-items:center;gap:clamp(14px,2vw,30px)}
 .nav a{
@@ -209,7 +209,7 @@ html[lang="zh"] .values-intro{font-family:var(--serif-cjk);font-style:normal;let
 }
 .nav a:hover::after,.nav a.active::after{width:100%}
 .nav a.active{color:var(--accent)}
-.site-head.on-dark:not(.is-solid) .nav a{color:rgba(233,235,233,.8)}
+.site-head.on-dark:not(.is-solid) .nav a{color:rgba(238,235,226,.8)}
 .site-head.on-dark:not(.is-solid) .nav a.active{color:var(--accent)}
 
 .lang-switch{display:flex;gap:2px;align-items:center;margin-left:8px}
@@ -218,7 +218,7 @@ html[lang="zh"] .values-intro{font-family:var(--serif-cjk);font-style:normal;let
   color:var(--silver);padding:4px 7px;border-radius:2px;transition:color .3s;
 }
 .lang-switch button.active{color:var(--ink);font-weight:500}
-.site-head.on-dark:not(.is-solid) .lang-switch button{color:rgba(233,235,233,.55)}
+.site-head.on-dark:not(.is-solid) .lang-switch button{color:rgba(238,235,226,.55)}
 .site-head.on-dark:not(.is-solid) .lang-switch button.active{color:var(--ink)}
 .lang-switch .sep{color:var(--hair);font-size:.7rem}
 
@@ -242,18 +242,18 @@ body.nav-open .nav-toggle span:nth-child(3){top:15px;transform:rotate(-45deg)}
 .hero__media .ph::before,.hero__media .ph::after{display:none}
 .hero::after{
   content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(27,28,32,.55) 0%,rgba(27,28,32,.18) 40%,rgba(27,28,32,.82) 100%);
+  background:linear-gradient(180deg,rgba(16,18,22,.55) 0%,rgba(16,18,22,.18) 40%,rgba(16,18,22,.82) 100%);
 }
 .hero__inner{position:relative;z-index:2;color:var(--ink);width:100%;padding-bottom:clamp(60px,9vw,120px)}
 .hero .display{color:var(--ink);max-width:16ch}
-.hero .lead{color:rgba(233,235,233,.82);max-width:52ch;margin-top:1.2em}
-.hero .kicker{color:rgba(233,235,233,.6);margin-bottom:1.6em}
+.hero .lead{color:rgba(238,235,226,.82);max-width:52ch;margin-top:1.2em}
+.hero .kicker{color:rgba(238,235,226,.6);margin-bottom:1.6em}
 .hero .btns{margin-top:2.2em}
 .hero__corner{
   position:absolute;top:calc(50% );right:var(--gutter);z-index:2;
   writing-mode:vertical-rl;font-family:var(--sans);
   font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;
-  color:rgba(233,235,233,.55);
+  color:rgba(238,235,226,.55);
 }
 
 /* ---------- Placeholder image system ---------- */
@@ -315,9 +315,9 @@ body.nav-open .nav-toggle span:nth-child(3){top:15px;transform:rotate(-45deg)}
 /* ---------- Feature blocks ---------- */
 .dark{background:var(--night);color:var(--ink)}
 .dark .h-sec,.dark .h-sub,.dark .display{color:var(--ink)}
-.dark .lead{color:rgba(233,235,233,.8)}
-.dark .muted{color:rgba(233,235,233,.55)}
-.dark .prose p{color:rgba(233,235,233,.78)}
+.dark .lead{color:rgba(238,235,226,.8)}
+.dark .muted{color:rgba(238,235,226,.55)}
+.dark .prose p{color:rgba(238,235,226,.78)}
 .dark .rule{background:var(--accent);opacity:.9}
 .tinted{background:var(--paper-2)}
 
@@ -327,8 +327,8 @@ body.nav-open .nav-toggle span:nth-child(3){top:15px;transform:rotate(-45deg)}
 .step .no{font-family:var(--serif);font-size:1.1rem;color:var(--silver)}
 .step h4{font-family:var(--serif);font-size:1.35rem;margin:.3em 0 .3em}
 .step p{font-size:.92rem;color:var(--muted);margin:0}
-.dark .step{border-color:rgba(233,235,233,.2)}
-.dark .step .no,.dark .step p{color:rgba(233,235,233,.6)}
+.dark .step{border-color:rgba(238,235,226,.2)}
+.dark .step .no,.dark .step p{color:rgba(238,235,226,.6)}
 
 /* ---------- Cards ---------- */
 .card{display:flex;flex-direction:column;gap:1em;group:card}
@@ -353,8 +353,8 @@ body.nav-open .nav-toggle span:nth-child(3){top:15px;transform:rotate(-45deg)}
 .spec{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.4em}
 .spec span{
   font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;
-  color:var(--accent-2);border:1px solid rgba(200,138,58,.42);
-  padding:.45em .9em;border-radius:2px;background:rgba(200,138,58,.08);
+  color:var(--accent-2);border:1px solid rgba(173,165,136,.42);
+  padding:.45em .9em;border-radius:2px;background:rgba(173,165,136,.08);
 }
 .note-compliance{
   margin-top:1.3em;font-size:.78rem;color:var(--silver);
@@ -385,7 +385,7 @@ body.nav-open .nav-toggle span:nth-child(3){top:15px;transform:rotate(-45deg)}
 /* ---------- Chapter (heritage) ---------- */
 .chapter{border-top:1px solid var(--hair-gold);padding-top:clamp(40px,6vw,72px);margin-top:clamp(40px,6vw,72px)}
 .chapter:first-of-type{border-top:none;margin-top:0;padding-top:0}
-.chapter__no{font-family:var(--serif);font-size:3rem;color:rgba(200,138,58,.45);line-height:1;display:block;margin-bottom:.1em}
+.chapter__no{font-family:var(--serif);font-size:3rem;color:rgba(173,165,136,.45);line-height:1;display:block;margin-bottom:.1em}
 .chapter h2{font-family:var(--serif);font-size:clamp(1.6rem,3.2vw,2.4rem);margin-bottom:.8em}
 
 /* ---------- Callout / compliance banners on content ---------- */
@@ -470,3 +470,14 @@ body.nav-open .nav-toggle span:nth-child(3){top:15px;transform:rotate(-45deg)}
   .foot-grid .foot-col:nth-child(2){margin-top:0}
   .hero__corner{display:none}
 }
+
+/* ========== 黑金主题 · 鎏金标题 / 冷炭灰纵深 / 细颗粒质感 ========== */
+body{background:radial-gradient(135% 95% at 50% -8%,#202329 0%,#17191d 48%,#101216 100%) fixed,#101216}
+.display,.h-sec,.h-sub,.chapter h2,.chapter h3,.arch-cta__text h2,.prose h3,.prose h4,
+.dark .display,.dark .h-sec,.dark .h-sub,.page-hero .display{color:var(--accent)}
+.hero .display{color:var(--accent);text-shadow:0 2px 22px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.7)}
+.hero .kicker{color:var(--accent)}
+body::after{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.045;mix-blend-mode:overlay;background-size:150px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* 英德首页标题 · Gilda Display(典雅) */
+html[lang="en"] .hero .display,html[lang="de"] .hero .display{font-family:"Bodoni Moda",serif;font-weight:400}
