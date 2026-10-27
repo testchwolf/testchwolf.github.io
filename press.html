@@ -47,8 +47,47 @@
   <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
 
+<style>
+.press-gallery{padding-top:clamp(84px,10vw,110px)}
+.press-gallery .pg-stage{position:relative;background:#0c0e11;border:1px solid var(--hair);overflow:hidden;display:flex;align-items:center;justify-content:center;aspect-ratio:3/2;max-height:44vh;max-width:min(100%,66vh);margin-inline:auto}
+.press-gallery .pg-main{width:100%;height:100%;object-fit:contain;display:block;cursor:zoom-in}
+.press-gallery .pg-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border:1px solid var(--hair-gold);background:rgba(14,16,19,.5);color:var(--ink);font:400 26px/1 var(--serif-body);cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;padding-bottom:3px;transition:.25s;backdrop-filter:blur(3px)}
+.press-gallery .pg-nav:hover{background:var(--accent);color:var(--night);border-color:var(--accent)}
+.press-gallery .pg-prev{left:14px}.press-gallery .pg-next{right:14px}
+.press-gallery .pg-count{position:absolute;bottom:12px;right:14px;z-index:3;font:400 .72rem/1 var(--sans);letter-spacing:.12em;color:var(--ink);background:rgba(14,16,19,.55);padding:4px 11px;border-radius:20px;backdrop-filter:blur(3px)}
+.press-gallery .pg-full{position:absolute;bottom:11px;left:14px;z-index:3;width:30px;height:30px;border:none;background:rgba(14,16,19,.55);color:var(--ink);cursor:pointer;border-radius:50%;font-size:14px;backdrop-filter:blur(3px)}
+.press-gallery .pg-thumbs{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px}
+.press-gallery .pg-thumbs img{height:60px;width:90px;object-fit:cover;flex:0 0 auto;cursor:pointer;opacity:.45;border:1px solid transparent;transition:.2s}
+.press-gallery .pg-thumbs img:hover{opacity:.8}
+.press-gallery .pg-thumbs img.active{opacity:1;border-color:var(--accent)}
+.pg-overlay{position:fixed;inset:0;z-index:2147483646;background:rgba(9,10,12,.96);display:none;align-items:center;justify-content:center}
+.pg-overlay.open{display:flex}
+.pg-overlay img{max-width:94vw;max-height:92vh;object-fit:contain}
+.pg-overlay .pg-nav{position:fixed}
+.pg-overlay .pg-close{position:fixed;top:16px;right:22px;font-size:34px;line-height:1;color:#fff;background:none;border:none;cursor:pointer;z-index:3}
+@media (max-width:680px){
+  .press-gallery .pg-stage{aspect-ratio:4/3}
+  .press-gallery .pg-nav{width:38px;height:38px;font-size:21px}
+  .press-gallery .pg-thumbs img{height:50px;width:74px}
+}
+</style>
+
+<!-- ===== EVENT GALLERY ===== -->
+<section class="press-gallery" aria-label="Gallery">
+  <div class="wrap">
+    <div class="pg-stage" id="pgStage">
+      <button class="pg-nav pg-prev" id="pgPrev" aria-label="Previous">&lsaquo;</button>
+      <img class="pg-main" id="pgMain" src="assets/img/press/1.jpg" alt="">
+      <button class="pg-nav pg-next" id="pgNext" aria-label="Next">&rsaquo;</button>
+      <button class="pg-full" id="pgFull" aria-label="Fullscreen">&#x2922;</button>
+      <div class="pg-count"><span id="pgCur">1</span> / <span id="pgTot">12</span></div>
+    </div>
+    <div class="pg-thumbs" id="pgThumbs"></div>
+  </div>
+</section>
+
 <!-- ===== PAGE HERO ===== -->
-<section class="page-hero" style="padding-bottom:0">
+<section class="page-hero" style="padding-top:clamp(26px,4vw,48px);padding-bottom:0">
   <div class="wrap">
     <h1 class="display">
       <span data-lang="zh">媒体报道</span>
@@ -179,5 +218,60 @@
 </footer>
 
 <script src="assets/js/site.js"></script>
+<script>
+/* ===== 活动画廊 ===== */
+(function(){
+  var TOTAL=12, START=1, cur=START, base="assets/img/press/";
+  var main=document.getElementById('pgMain'), curEl=document.getElementById('pgCur'),
+      thumbsBox=document.getElementById('pgThumbs');
+  if(!main) return;
+  document.getElementById('pgTot').textContent=TOTAL;
+  var thumbEls=[];
+  for(var i=1;i<=TOTAL;i++){(function(i){
+    var t=document.createElement('img');
+    t.src=base+'thumbs/'+i+'.jpg'; t.loading='lazy'; t.alt=''; t.draggable=false;
+    t.addEventListener('click',function(){go(i);});
+    thumbsBox.appendChild(t); thumbEls[i]=t;
+  })(i);}
+  // 全屏浮层
+  var ov=document.createElement('div'); ov.className='pg-overlay';
+  ov.innerHTML='<button class="pg-close" aria-label="Close">&times;</button>'
+    +'<button class="pg-nav pg-prev" aria-label="Previous">&lsaquo;</button>'
+    +'<img alt="">'
+    +'<button class="pg-nav pg-next" aria-label="Next">&rsaquo;</button>';
+  document.body.appendChild(ov);
+  var ovImg=ov.querySelector('img');
+  function openOv(){ovImg.src=base+cur+'.jpg';ov.classList.add('open');document.body.style.overflow='hidden';}
+  function closeOv(){ov.classList.remove('open');document.body.style.overflow='';}
+  function go(i){
+    i=((i-1+TOTAL)%TOTAL)+1; cur=i;
+    main.src=base+i+'.jpg';
+    if(ov.classList.contains('open')) ovImg.src=main.src;
+    curEl.textContent=i;
+    for(var k=1;k<=TOTAL;k++){thumbEls[k].classList.toggle('active',k===i);}
+    try{thumbEls[i].scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});}catch(e){}
+  }
+  document.getElementById('pgPrev').addEventListener('click',function(){go(cur-1);});
+  document.getElementById('pgNext').addEventListener('click',function(){go(cur+1);});
+  document.getElementById('pgFull').addEventListener('click',function(e){e.stopPropagation();openOv();});
+  main.addEventListener('click',openOv);
+  ov.querySelector('.pg-close').addEventListener('click',closeOv);
+  ov.querySelector('.pg-prev').addEventListener('click',function(){go(cur-1);});
+  ov.querySelector('.pg-next').addEventListener('click',function(){go(cur+1);});
+  ov.addEventListener('click',function(e){if(e.target===ov)closeOv();});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft')go(cur-1);
+    else if(e.key==='ArrowRight')go(cur+1);
+    else if(e.key==='Escape'&&ov.classList.contains('open'))closeOv();
+  });
+  // 手机滑动
+  function swipe(el){var sx=null;
+    el.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+    el.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)go(cur+(dx<0?1:-1));sx=null;},{passive:true});
+  }
+  swipe(main); swipe(ovImg);
+  go(START);
+})();
+</script>
 </body>
 </html>
