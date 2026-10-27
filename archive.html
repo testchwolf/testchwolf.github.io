@@ -322,7 +322,7 @@ function openModal(g){
       items.map(v=>`<li><span>${variantName(v)}</span><span class="vr">${[v.ref,(v.limited?`${L.limited[lang()]} ${v.limited}`:"")].filter(Boolean).join(" · ")||"&nbsp;"}</span></li>`).join("")+`</ul>`;
   } else { $("#mVars").innerHTML=""; }
   const src=[...new Set(items.flatMap(v=>v.sources||[]).filter(Boolean))];
-  $("#mSrc").innerHTML = src.length ? `${UI.sources[lang()]}: `+src.map(u=>`<a href="${u}" target="_blank" rel="noopener">↗</a>`).join("") : "";
+  $("#mSrc").innerHTML = "";  /* 来源(web.archive 历史镜像)已隐藏；如需恢复：改回 src.length ? `${UI.sources[lang()]}: `+... : "" */
   $("#mNote").textContent = [...new Set(items.flatMap(v=>v.notes||[]))].join(" · ");
   $("#modal").classList.add("open"); document.body.classList.add("modal-open");
 }
