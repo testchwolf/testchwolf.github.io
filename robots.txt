@@ -1,3 +1,4 @@
-# 改版期：禁止收录
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://chwolf-glashuette.com/sitemap.xml
