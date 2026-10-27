@@ -481,3 +481,13 @@ body::after{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;o
 
 /* 英德首页标题 · Gilda Display(典雅) */
 html[lang="en"] .hero .display,html[lang="de"] .hero .display{font-family:"Bodoni Moda",serif;font-weight:400}
+
+/* ========== 桌面版式锁定 ==========
+   ≥1440px：整站锁定 1440px 居中，更大的屏两侧为深色留边 → 任何桌面大屏都与参考屏(13"/14")完全相同的版式。
+   <1440px（含手机/平板/竖屏/小笔记本）：保持各自的响应式布局，不受影响。 */
+html{background:#101216}
+body{max-width:1440px;margin-inline:auto}
+@media (min-width:1440px){
+  .site-head{left:50%;right:auto;transform:translateX(-50%);width:100%;max-width:1440px}
+  body{box-shadow:0 0 0 1px rgba(173,165,136,.10), 0 0 140px rgba(0,0,0,.55)}
+}
