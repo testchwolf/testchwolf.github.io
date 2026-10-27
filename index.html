@@ -9,7 +9,7 @@
 <meta name="description" content="C.H. WOLF — a Glashütte name established in 1868. Precision mechanics joined with materials of documented provenance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=45">
+<link rel="stylesheet" href="assets/css/site.css?v=46">
   <link rel="canonical" href="https://chwolf-glashuette.com/index.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="C.H. WOLF">
@@ -49,17 +49,6 @@
     /* 英/德文字更长：标题与正文字号再收，同样稳定落在中下段、不上顶 */
     html[lang="en"] .hero .display,html[lang="de"] .hero .display{font-size:clamp(1.5rem,6vw,1.8rem)}
     html[lang="en"] .hero .lead,html[lang="de"] .hero .lead{font-size:.9rem;line-height:1.55}
-  }
-  /* 大屏增强（≥1800px，仅影响大显示器）：标题/正文放大、文字块加宽、容器变宽、位置上提，避免大屏上文字偏小偏左下、四周过空 */
-  @media (min-width:1800px){
-    .hero .wrap{max-width:1560px}
-    .hero__inner{padding-bottom:clamp(120px,9vh,210px);transform:none !important}
-    .hero .kicker{font-size:.92rem;margin-bottom:2em}
-    .hero .display{font-size:clamp(4.1rem,4.4vw,6.1rem);line-height:1.08}
-    .hero .lead{font-size:1.32rem;line-height:1.75;margin-top:1.4em}
-    html[lang="zh"] .hero .display{max-width:940px}  html[lang="zh"] .hero .lead{max-width:760px}
-    html[lang="en"] .hero .display{max-width:1080px} html[lang="en"] .hero .lead{max-width:860px}
-    html[lang="de"] .hero .display{max-width:1180px} html[lang="de"] .hero .lead{max-width:860px}
   }
 </style>
 </head>
