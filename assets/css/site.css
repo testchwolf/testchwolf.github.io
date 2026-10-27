@@ -475,7 +475,7 @@ body.nav-open .nav-toggle span:nth-child(3){top:15px;transform:rotate(-45deg)}
 body{background:radial-gradient(135% 95% at 50% -8%,#202329 0%,#17191d 48%,#101216 100%) fixed,#101216}
 .display,.h-sec,.h-sub,.chapter h2,.chapter h3,.arch-cta__text h2,.prose h3,.prose h4,
 .dark .display,.dark .h-sec,.dark .h-sub,.page-hero .display{color:var(--accent)}
-.hero .display{color:var(--accent);text-shadow:0 2px 22px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.7)}
+.hero .display{color:var(--accent);text-shadow:0 1px 8px rgba(0,0,0,.35)}
 .hero .kicker{color:var(--accent)}
 body::after{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.045;mix-blend-mode:overlay;background-size:150px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
